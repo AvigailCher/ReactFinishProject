@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Container, Badge } from "react-bootstrap";
 import { FaUser, FaSearch, FaHeart, FaShoppingCart } from "react-icons/fa";
-import logo from './images/logo_noizz_1.png';
+import logo from '../images/logo_noizz_1.png';
+
 function CustomNavbar() {
   return (
     <Navbar bg="white" expand="lg" className="border-bottom py-3">
@@ -11,7 +12,7 @@ function CustomNavbar() {
 
         {/* לוגו */}
         <Navbar.Brand as={Link} to="/" className="d-flex justify-content-start">
-        <img src={logo} alt="NOIZZ" height="30" />
+          <img src={logo} alt="NOIZZ" height="30" />
         </Navbar.Brand>
 
         {/* כפתור המבורגר למובייל */}
@@ -20,12 +21,13 @@ function CustomNavbar() {
         {/* ניווט מרכזי */}
         <Navbar.Collapse id="basic-navbar-nav" className="d-lg-flex justify-content-center">
           <Nav className="mx-auto gap-4 text-center">
-            <Nav.Link as={Link} to="/Sale" className="text-danger fw-bold">SALE</Nav.Link>
-            <Nav.Link as={Link} to="/Accessories">אקססוריז</Nav.Link>
-            <Nav.Link as={Link} to="/Shoes">נעליים</Nav.Link>
-            <Nav.Link as={Link} to="/Girls">בנות</Nav.Link>
-            <Nav.Link as={Link} to="/Boys">בנים</Nav.Link>
-            <Nav.Link as={Link} to="/NewCollection" className="fw-bold">New Collection</Nav.Link>
+            {/* כל אחד מהקישורים עובר לנתיב דינאמי עם שם הקטגוריה */}
+            <Nav.Link as={Link} to="/category/Sale" className="text-danger fw-bold">SALE</Nav.Link>
+            <Nav.Link as={Link} to="/category/Accessories">אקססוריז</Nav.Link>
+            <Nav.Link as={Link} to="/category/Shoes">נעליים</Nav.Link>
+            <Nav.Link as={Link} to="/category/Girls">בנות</Nav.Link>
+            <Nav.Link as={Link} to="/category/Boys">בנים</Nav.Link>
+            <Nav.Link as={Link} to="/category/NewCollection" className="fw-bold">New Collection</Nav.Link>
           </Nav>
         </Navbar.Collapse>
 
@@ -46,4 +48,3 @@ function CustomNavbar() {
 }
 
 export default CustomNavbar;
-
