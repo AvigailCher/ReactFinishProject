@@ -27,17 +27,20 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CustomNavbar from './componnets/Navbar'; // ייבוא ה-Navbar
 import HomePage from './componnets/HomePage';
-// import ProductList from './componnets/ProductList'; // ייבוא של ה-ProductList
+import ProductList from './componnets/ProductList'; // ייבוא של ה-ProductList
+import { Provider } from 'react-redux';
 
 function App() {
   return (
+    
     <BrowserRouter>
       <CustomNavbar /> {/* Navbar יופיע בכל הדפים */}
       <Routes>
         <Route path="/" element={<HomePage />} /> {/* דף הבית */}
-        {/* <Route path="/category/:category" element={<ProductList />} /> נתיב דינאמי עבור כל קטגוריה */}
+        <Route path="/products/:category" element={<ProductList />} /> נתיב דינאמי עבור כל קטגוריה
       </Routes>
     </BrowserRouter>
+    
   );
 }
 

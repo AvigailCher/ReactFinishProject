@@ -1,46 +1,46 @@
-import React from 'react';
-import Slider from 'react-slick';
-import { Container } from 'react-bootstrap';
-import pic1 from '../shkufit/piture1.png'
-import pic2 from '../shkufit/picture2.png'
-import pic3 from '../shkufit/picture3.png'
-import pic4 from '../shkufit/picture4.png'
-import pic5 from '../shkufit/picture5.png'
-function ImageCarousel() {
-  // הגדרות ה-Slick Carousel
-  const settings = {
-    dots: true, // הראה נקודות ניווט
-    infinite: true, // חזרה על המצגת
-    speed: 500, // מהירות המעבר בין התמונות
-    slidesToShow: 1, // מספר התמונות המוצגות בו זמנית
-    slidesToScroll: 1, // מספר התמונות שמתגלגלות בכל פעם
-    autoplay: true, // הפעלת אוטומטית
-    autoplaySpeed: 2000, // קצב המעבר בין התמונות
-  };
+import React, { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { Carousel } from 'bootstrap';
+
+import pic1 from '../shkufit/piture1.png';
+import pic2 from '../shkufit/picture2.png';
+import pic3 from '../shkufit/picture3.png';
+import pic4 from '../shkufit/picture4.png';
+import pic5 from '../shkufit/picture5.png';
+
+const ImageCarousel = () => {
+  useEffect(() => {
+    const carouselElement = document.querySelector('#imageCarousel');
+    if (carouselElement) {
+      new Carousel(carouselElement, {
+        interval: 1000,
+        ride: 'carousel'
+      });
+    }
+  }, []);
+
+  const images = [pic1, pic2, pic3, pic4, pic5];
 
   return (
-    <Container className="my-5">
-      <h2 className="text-center mb-4">הכירו את הקולקציה החדשה שלנו!</h2>
-      <Slider {...settings}>
-        <div>
-          <img src={pic1} alt="Kids Clothing 1" className="w-10" />
-        </div>
-        <div>
-          <img src={pic2} alt="Kids Clothing 2" className="w-10" />
-        </div>
-        <div>
-          <img src={pic3} alt="Kids Clothing 3" className="w-10" />
-        </div>
-        <div>
-          <img src={pic4} alt="Kids Clothing 4" className="w-10" />
-        </div>
-        <div>
-          <img src={pic5} alt="Kids Clothing 5" className="w-10" />
-        </div>
-        {/* הוסף כאן עוד תמונות אם תרצי */}
-      </Slider>
-    </Container>
+    <div id="imageCarousel" className="carousel slide">
+      <div className="carousel-inner">
+        {images.map((src, index) => (
+          <div key={index} className={`carousel-item ${index === 0 ? 'active' : ''}`}>
+            <img
+              src={src}
+              className="d-block w-100"
+              alt={`תמונה ${index + 1}`}
+              style={{ height: '100vh', objectFit: 'cover' }}
+            />
+            <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
+              <h1 style={{ textShadow: '0 0 10px black' }}>הקולקציה החדשה שלנו</h1>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
-}
+};
 
 export default ImageCarousel;
