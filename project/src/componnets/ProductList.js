@@ -8,9 +8,11 @@ function ProductList() {
   const dispatch = useDispatch();
 
   const products = useSelector((state) => state.arr);
-
+  console.log("products:", products);
   useEffect(() => {
-    switch (category) {
+    const cat = category.toLowerCase(); // ← הפוך את שם הקטגוריה לאותיות קטנות
+  
+    switch (cat) {
       case 'boys':
         dispatch(boys());
         break;
@@ -24,7 +26,7 @@ function ProductList() {
         dispatch(newcollection());
         break;
       case 'shoes':
-        dispatch(shose());
+        dispatch(shose()); // ← ודאי שהשם תואם לקובץ action
         break;
       case 'accessories':
         dispatch(excesoris());

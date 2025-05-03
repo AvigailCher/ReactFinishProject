@@ -37,7 +37,7 @@ function App() {
       <CustomNavbar /> {/* Navbar יופיע בכל הדפים */}
       <Routes>
         <Route path="/" element={<HomePage />} /> {/* דף הבית */}
-        <Route path="/products/:category" element={<ProductList />} /> נתיב דינאמי עבור כל קטגוריה
+        <Route path="/category/:category" element={<ProductList />} /> נתיב דינאמי עבור כל קטגוריה
       </Routes>
     </BrowserRouter>
     
