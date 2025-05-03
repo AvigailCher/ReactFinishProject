@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { boys, girls, sale, newcollection, shose, excesoris } from '../redux/action';
+import { Link } from 'react-router-dom';
 
 function ProductList() {
   const { category } = useParams();
@@ -38,19 +39,21 @@ function ProductList() {
 
   return (
     <div>
-      <h1>קטגוריה: {category}</h1>
-      <div className="product-list">
-        {products.map((item, index) => (
-          <div key={index}>
+    <h1>קטגוריה: {category}</h1>
+    <div className="product-list">
+      {products.map((item, index) => (
+        <Link to={`/product/${item.id}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+          <div style={{ border: '1px solid #ccc', padding: '10px', margin: '10px' }}>
             <img src={item.image} alt={item.name} style={{ width: '200px' }} />
             <h3>{item.name}</h3>
             <p>{item.txt}</p>
             <p>מחיר: {item.price}₪</p>
             <p>משלוח: {item.send}</p>
           </div>
-        ))}
-      </div>
+        </Link>
+      ))}
     </div>
+  </div>
   );
 }
 

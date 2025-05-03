@@ -8,8 +8,8 @@ import boysImage from 'C:/Users/user/Documents/לימודים-אביגיל/רי�
 const initialState = {
   arr: [],
   boys: [
-    { name: "חולצת בנים", price: 79.90, image: boysImage, txt: "חולצה קלאסית ליום יום", send: "15₪" },
-    { name: "מכנסיים קצרים", price: 69.90, image: boysImage, txt: "מכנסיים נוחים לימי הקיץ", send: "15₪" }
+    { id: 101, name: "חולצת בנים", price: 79.90, image: boysImage, txt: "חולצה קלאסית ליום יום", send: "15₪" },
+    {  id: 102,name: "מכנסיים קצרים", price: 69.90, image: boysImage, txt: "מכנסיים נוחים לימי הקיץ", send: "15₪" }
   ],
   girls: [
     { name: "שמלה פרחונית", price: 99.90, image: boysImage, txt: "שמלה לאירועים וקיץ", send: "15₪" },
