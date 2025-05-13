@@ -507,22 +507,42 @@
     min-width: 350px;
   }
   
-  .main-image-container {
+ .main-image-container {
     width: 100%;
     max-width: 500px;
-    height: 650px; /* גובה קבוע */
+    height: 560px; 
     flex-shrink: 0;
   }
   
   
-  .main-image {
+   /* .main-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 12px;
     border: 1px solid #ccc;
     transition: 0.3s ease-in-out;
+  } */
+
+  /*.main-image-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+     background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* שומר על התמונה שלמה */
+    display: block;
   }
+  
+  
   
   
   .side-thumbnails {

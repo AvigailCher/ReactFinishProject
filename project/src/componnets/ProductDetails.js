@@ -433,6 +433,8 @@ function ProductDetails() {
       <div className="image-wrapper">
         <div className="main-image-container">
           <img src={selectedImage} alt={product.name} className="main-image" />
+          
+
         </div>
         <div className="side-thumbnails">
           {(product.images || []).map((img, idx) => (
