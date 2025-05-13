@@ -1,0 +1,28 @@
+/* גודל קבוע ואחיד לתמונות מוצרים */
+.product-image {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* תמונות בסל */
+  .cart-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  /* עיצוב מודאל */
+  .custom-modal {
+    background-color: #fffbea;
+    border: 2px solid black;
+    color: black;
+  }
+  
+  /* קישור לתמונה מבלי עיצוב טקסט */
+  .image-link {
+    text-decoration: none;
+    color: inherit;
+  }
