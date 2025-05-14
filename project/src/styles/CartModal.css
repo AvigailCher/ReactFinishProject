@@ -1,0 +1,129 @@
+.cart-modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: rtl;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .cart-modal {
+    background: white;
+    width: 400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .close-btn {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .modal-header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .free-shipping-bar {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .progress-bar {
+    background: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    position: relative;
+  }
+  
+  .progress {
+    background: #ffe600;
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+  
+
+  
+  .amount {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  
+  .cart-items {
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .cart-item img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: 10px;
+  }
+  
+  .item-info span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+  
+  .cart-footer {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+    text-align: center;
+  }
+  
+  .total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-btn,
+  .cart-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cart-btn {
+    background-color: #333;
+  }
+  

@@ -1,19 +1,5 @@
-// import React from "react";
-
-// const AboutPage = () => {
-//   return (
-//     <div style={{ padding: "40px", fontFamily: 'Assistant, sans-serif' }}>
-//       <h1 style={{ color: "#f3cc00" }}>אודות</h1>
-//       <p>ברוכים הבאים לאתר שלנו! כאן תוכלו לקרוא עוד עלינו, על החזון, המוצרים והשירות שלנו.</p>
-//     </div>
-//   );
-// };
-
-// export default AboutPage;
-
 
 import React from "react";
-// import "./AboutPage.css";
 import "../styles/About.css"
 const AboutPage = () => {
   return (

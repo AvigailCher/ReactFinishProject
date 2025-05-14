@@ -52,3 +52,5 @@ const CartModal = ({ isOpen, onClose, cartItems, totalPrice, onCheckout }) => {
 };
 
 export default CartModal;
+
+
